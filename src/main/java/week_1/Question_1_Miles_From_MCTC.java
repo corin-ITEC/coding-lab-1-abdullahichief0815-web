@@ -26,18 +26,25 @@ public class Question_1_Miles_From_MCTC {
 
     }
 
-    
-    public static String milesFromMCTC(double miles){
+
+    public static String milesFromMCTC(double miles) {
 
         // TODO Use if - else if - else statements to return the correct String
 
         // Return  "You live more than 10 miles from MCTC" if they live more than 10 miles away,
         // Return  "You live exactly 10 miles from MCTC" if they live exactly 10 miles away,
         // Return  "You live less than 10 miles from MCTC" if they live less than 10 miles away.
-        
-        return null; // TODO delete this line and replace with your code.
+
+        if (miles > 10) {
+            return "You live more than 10 miles from MCTC";// used an if statement to check if answer is more thsn 10miles
+        } else if (miles == 10) {// this si to check whether the answer is exactly 10 miles
+            return "You live exactly 10 miles from MCTC";// this are our strings that we return to the user based on their answers
+        } else {
+            return "You live less than 10 miles from MCTC";
+
+        }
+
     }
-    
-    
+
 }
 
