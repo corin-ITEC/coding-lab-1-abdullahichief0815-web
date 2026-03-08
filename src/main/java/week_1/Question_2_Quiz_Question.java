@@ -29,15 +29,20 @@ public class Question_2_Quiz_Question {
         }
         
     }
-    
+
+
+
+
+
     public static boolean checkAnswer(String answer) {
-        
+        return answer.equalsIgnoreCase("pong");
+
         // TODO check that the user's answer is "Pong" in any letter case.
         // Case doesn't matter, so "pong" or "PONG" or any other variation in case is the correct answer.
         // Remember that using == to compare Strings may not do what you expect it to do!
         
         // TODO replace this line with your own code
-        return false;
+
     }
     
 }

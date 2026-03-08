@@ -24,17 +24,17 @@ import static input.InputUtils.doubleInput;
  */
 
 public class Question_5_Parcel_Delivery {
-    
+
     public static double MAX_WEIGHT = 30;   // Use this in the canShip method
-    
+
     public static void main(String[] args) {
-        
+
         // Don't modify the code in this method.
-        
+
         double weight = doubleInput("Enter weight of parcel");
-        
+
         boolean canShip = canShip(weight);
-        
+
         if (canShip) {
             double price = calculatePrice(weight);
             System.out.printf("It will cost %.2f to send your %.2f pound parcel.", price, weight);
@@ -42,19 +42,35 @@ public class Question_5_Parcel_Delivery {
             System.out.printf("A parcel that weighs %.2f pounds can't be shipped.", weight);
         }
     }
-    
-    
+
+
     public static boolean canShip(double weight) {
+        return weight > 0 && weight <= MAX_WEIGHT;
+
         // TODO return false if parcel weight is 0 or less
         // TODO return false if parcel weight is more than MAX_WEIGHT. Use the MAX_WEIGHT variable in this code
         // TODO return true if the parcel weight is more than 0 and less than or equal to MAX_WEIGHT. Use the MAX_WEIGHT variable in this code
 
-        return false;  // Replace this with your code
+          // Replace this with your code
     }
     
     
     public static double calculatePrice(double weight) {
+        double rate;
 
+        if (weight <= 10) {
+            rate = 2.15;
+        }
+        else if (weight <= 20) {
+            rate = 1.55;
+        }
+        else {
+            rate = 1.15;
+        }
+
+        return weight * rate;
+
+        }
         // TODO assume parcel is a valid weight. Figure out price to ship this parcel.
         //  If the parcel is not a valid weight, return 0.
 
@@ -67,9 +83,6 @@ public class Question_5_Parcel_Delivery {
         // For example, for a 15 pound parcel, the weight variable will be 15. The price rate is 1.55 per pound (up to and including 20 pounds)
         // So the price is 15 * 1.55 = 23.25.
 
-        return 0;  // Replace this with your code
+         // Replace this with your code
 
     }
-    
-    
-}

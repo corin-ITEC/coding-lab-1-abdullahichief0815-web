@@ -38,6 +38,9 @@ public class Question_6_Windows_10_Install {
     }
 
     public static boolean checkWindows10SystemRequirements(String currentOS, double processorSpeed, double ram) {
+     boolean rightOS = currentOS.equals("windows 7") || currentOS.equals("Windows 8");
+     boolean rightProcessor  = processorSpeed >= 1;
+     boolean rightRAM = ram >= 2;
 
         // TODO write code to check if the computer meets the upgrade requirements.
         // The computer can be upgraded only if ALL the conditions are met.
@@ -46,7 +49,7 @@ public class Question_6_Windows_10_Install {
         // Return false if the computer can't be upgraded.
 
         // TODO remove this line, and replace with your own code.
-        return false;
+        return rightOS && rightProcessor && rightRAM ;
 
     }
     

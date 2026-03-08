@@ -36,7 +36,11 @@ public class Question_3_NASA_Astronauts {
     }
 
     public static boolean checkAstronautQualifications(double height, double swimDistance) {
-
+        if (height >= 58 && height <= 76 && swimDistance >= 75) {
+            return true;
+        } else {
+           return  false;
+        }
         // TODO check if the height, and swim distance meet NASA's requirements.
         // (The user must be at least 58 inches tall but not more than 76 inches tall,
         // AND they must be able to swim 75 yards or more. )
@@ -45,7 +49,7 @@ public class Question_3_NASA_Astronauts {
 
         // TODO remove this line and replace with your own code
 
-        return false;
+
 
 
     }

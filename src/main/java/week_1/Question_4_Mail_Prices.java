@@ -54,7 +54,13 @@ public class Question_4_Mail_Prices {
 
     public static int calculateStampPrice(boolean isRectangle, boolean isFlat) {
 
+        if (isRectangle && isFlat) {
+            return MACHINABLE_LETTER_PRICE;
+        } else {
+            return MACHINABLE_LETTER_PRICE + NON_MACHINABLE_SURCHARGE;
+        }
         /* TODO Calculate and return the price, in cents, to mail the letter.
+
         * Use the two boolean parameter variables, isRectangle and isFlat to figure out the price.
         * Use the MACHINABLE_LETTER_PRICE and NON_MACHINABLE_SURCHARGE variables declared
         * at the top of the file, which contain the current prices for mailing machinable letters,
@@ -62,7 +68,7 @@ public class Question_4_Mail_Prices {
         */
 
         //TODO delete this line and replace with your own code
-        return 0;   // This is the wrong answer, but Java requires us to return something.
+           // This is the wrong answer, but Java requires us to return something.
 
     }
     
